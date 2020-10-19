@@ -1,0 +1,80 @@
+.navigation.pagination .nav-links {
+  margin-top: rem-calc(40);
+  text-align: right;
+  span:not(.dots):not(.current),
+  a {
+    padding: rem-calc(7 15);
+    border-bottom: none;
+    background-color: #e0e0e0;
+    color: $dark-grey;
+    display: inline-block;
+    background-color: #fafafa;
+    border: 2px solid #e2e2e2;
+  }
+  a:hover {
+    background-color: $primary-colour;
+    color: #fff;
+  }
+  .dots,
+  .current {
+    padding: rem-calc(7 7);
+  }
+}
+
+.c-post-navigation {
+  $p: &;
+  &__links {
+    display: flex;
+    @media (min-width: 768) {
+      border-bottom: 1px solid $light-grey !important;
+      border-right: 1px solid $light-grey !important;
+      border-left: 1px solid $light-grey !important;
+    }
+  }
+  &__post {
+    flex: 1 1 auto;
+    max-width: 50%;
+    &--next {
+      #{$p}__thumbnail {
+        order: 1;
+        margin-left: rem-calc(15);
+      }
+      #{$p}__link {
+        justify-content: flex-end;
+        border-left: none !important;
+      }
+      #{$p}__content {
+        text-align: right;
+      }
+    }
+    &--prev {
+      #{$p}__thumbnail {
+        margin-right: rem-calc(15);
+      }
+      #{$p}__link {
+        justify-content: flex-start;
+      }
+    }
+  }
+  &__subtitle {
+    display: block;
+    color: $dark-grey;
+    font-size: rem-calc(14);
+  }
+  &__title {
+    display: block;
+    color: $brand;
+    font-weight: 600;
+  }
+  &__content {
+    flex: 1 1 auto;
+    margin: rem-calc(10 0);
+  }
+  &__link {
+    display: flex;
+    height: 100%;
+    background-color: #ffffff;
+    padding: rem-calc(20) 0 0;
+    overflow: hidden;
+  }
+}

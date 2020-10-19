@@ -1,0 +1,46 @@
+html {
+  box-sizing: border-box;
+  font-size: $base-font-size;
+}
+
+body {
+  background: $body-background;
+  @include font-body;
+  line-height: $global-lineheight;
+  color: $body-font-color;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 1 auto;
+}
+
+img {
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 100%;
+  height: auto;
+  -ms-interpolation-mode: bicubic;
+}
+
+* {
+  font-display: swap;
+}
+
+.yoast__breadcrumbs {
+  margin-top: 5px;
+  font-size: 0.875rem;
+  padding-left: 0.625rem;
+  @media (max-width: 767px) {
+    padding-left: 0;
+  }
+}
+
+#breadcrumbs {
+  margin-bottom: 0;
+}

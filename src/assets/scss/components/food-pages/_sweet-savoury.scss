@@ -1,0 +1,129 @@
+.c-sweet-savoury {
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: $brand;
+  }
+
+  &__intro-sweet {
+    margin: 50px 0 70px;
+    @media (max-width: 767px) {
+      margin: 30px 0.625rem 70px;
+    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &-text {
+      padding-right: 50px;
+      @media (min-width: 768px) and (max-width: 1023px) {
+        padding-right: 0;
+        margin-bottom: 50px;
+        max-width: 768px;
+      }
+      @media (max-width: 767px) {
+        padding-right: 0;
+        padding-bottom: 30px;
+        width: 100%;
+      }
+    }
+
+    &-image {
+      @media (min-width: 768px) and (max-width: 1023px) {
+        max-width: 768px;
+      }
+      @media (max-width: 767px) {
+        width: 100%;
+      }
+    }
+  }
+
+  &__savoury {
+    background: $brand-cream;
+  }
+
+  &__intro-savoury {
+    padding: 70px 0.625rem;
+    @media (max-width: 767px) {
+      padding: 50px 1.25rem 70px;
+    }
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+
+    &-text {
+      padding-left: 50px;
+      @media (min-width: 768px) and (max-width: 1023px) {
+        padding-left: 0;
+        margin-bottom: 50px;
+        max-width: 768px;
+      }
+      @media (max-width: 767px) {
+        padding-left: 0;
+        padding-bottom: 30px;
+        width: 100%;
+      }
+    }
+
+    &-image {
+      @media (min-width: 768px) and (max-width: 1023px) {
+        max-width: 768px;
+      }
+      @media (max-width: 767px) {
+        width: 100%;
+      }
+    }
+  }
+
+  &__price {
+    margin: 70px 1.25rem 25px;
+    @media (max-width: 767px) {
+      margin: 50px 1.25rem 25px;
+    }
+    &-description {
+      margin-bottom: 50px;
+      max-width: 768px;
+      @media (min-width: 768px) {
+        margin: 0 auto 50px;
+        text-align: center;
+      }
+    }
+  }
+
+  &__blog-posts-container {
+    background: $brand-cream;
+    padding: 70px 1.25rem 10px;
+    @media (max-width: 959px) {
+      padding: 50px 1.25rem 10px;
+    }
+  }
+
+  &__blog-posts {
+    
+  }
+
+  &__blog-link {
+    // font-size: 1.25rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 50px;
+    @media (max-width: 767px) {
+      margin: 0 0 50px;
+    }
+  
+    a {
+      padding: 5px 10px;
+      border: 1px solid $brand;
+      border-radius: 5px;
+    }
+
+    &--single {
+      margin: 0;
+      margin-top: 35px;
+      font-size: 1rem;
+    }
+  }
+}

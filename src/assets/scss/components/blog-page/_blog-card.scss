@@ -1,0 +1,64 @@
+.c-cake__posts {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.c-blog-card {
+  width: 32%;
+  border: 1px solid $light-grey;
+  border-radius: 10px;
+  background: $white;
+  padding: 0;
+  margin-bottom: 35px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  &__content {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    padding: 15px 10px;
+  }
+
+  &__meta {
+    font-size: 0.875rem;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 10px;
+  }
+
+  &__excerpt {
+    margin-top: 1rem;
+    flex: 1 1 auto;
+  }
+
+ &__footer {
+   font-size: 0.875rem;
+ }
+
+  &__read-more {
+    margin-top: 5px;
+  }
+ 
+}
+
+@media only screen and (max-width: 959px) {
+  .c-blog-card {
+    width: 48%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .c-blog-card {
+    width: 100%;
+    margin-bottom: 50px;
+
+    &:last-child {
+      margin-bottom: 20px;
+    }
+  }
+}

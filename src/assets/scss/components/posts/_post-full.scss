@@ -1,0 +1,15 @@
+.o-single-post {
+  &-full {
+    margin-top: 100px;
+    padding: 0 1.25rem;
+    .c-post {
+      p {
+        margin: 2rem 0;
+      }
+      &__inner {
+        max-width: 50rem;
+        margin: 0 auto;
+      }
+    }
+  }
+}

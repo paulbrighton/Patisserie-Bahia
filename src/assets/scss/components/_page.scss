@@ -1,0 +1,9 @@
+.c-page {
+  overflow: hidden;
+  &__header {
+      margin-bottom: rem-calc(20);
+  }
+  &__title {
+      font-weight: 600;
+  }
+}

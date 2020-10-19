@@ -1,0 +1,203 @@
+.c-blog {
+  &__header {
+    padding: 40px 0.625rem 0;
+    width: 100%;
+
+    &-cat {
+      padding: 25px 0 0;
+    }
+
+    h2 {
+      color: $brand;
+      margin-bottom: 0;
+      @media only screen and (max-width: 959px) {
+        margin-bottom: 20px;
+      }
+    }
+
+    &--top {
+      padding-bottom: 100px;
+      width: 100%;
+      justify-content: space-between;
+      @media (max-width: 959px) {
+        flex-direction: column;
+        padding-bottom: 70px;
+      }
+
+      &-cat {
+        padding:0 0.625rem 70px;
+      }
+
+      h1 {
+        margin-bottom: 0;
+        margin: 15px 0;
+        color: $brand;
+        @media (max-width: 767px) {
+          font-size: 1.875rem;
+          margin: 5px 0 15px;
+        }
+      }
+      .cat__form {
+        p {
+          color: $brand;
+
+          @media (max-width: 959px) {
+            margin-top: 25px;
+            text-align: center;
+          }
+        }
+      }
+    }
+
+    #cff .cff-item.cff-box,
+    #cff .cff-item.cff-box:first-child {
+      border: 1px solid $brand-lighter;
+    }
+  }
+
+  &-posts {
+    padding: 0 0.625rem;
+  }
+
+  &__articles {
+    padding: 0 0.625rem;
+    @media (max-width: 767px) {
+      padding: 0 1.25rem 50px;
+    }
+  }
+
+  &__social {
+    padding: 20px 0.625rem 0;
+    margin-bottom: 70px;
+
+    .cff-wrapper {
+      display: flex;
+      justify-content: center;
+    }
+
+    .cff-default-styles {
+      @media (min-width: 960px) {
+        width: 75% !important;
+      }
+    } 
+
+    h2 {
+      color: $brand;
+      margin-bottom: 50px;
+      @media (min-width: 960px) {
+        margin-bottom: 70px;
+      }
+    }
+  }
+
+  &-page__blog-link {
+    font-size: 1rem;
+    margin-left: 50px;
+    @media (max-width: 959px) {
+      margin-top: 25px;
+      margin-left: 0;
+    }
+  
+    a {
+      padding: 5px 10px;
+      border: 1px solid $brand-lighter;
+      border-radius: 5px;
+    }
+  }
+}
+
+@media screen and (max-width: 959px) {
+  .c-blog {
+    &__header {
+      padding: 40px 1.25rem 0;
+      margin-bottom: 10px;
+    }
+
+    &__social {
+      padding: 20px 0.625rem 0;
+    }
+  }
+}
+
+/* The container must be positioned relative: */
+.custom-select {
+  position: relative;
+  @include font-body;
+  width: 300px;
+
+  input {
+    background-color: $white;
+    border-top: 1px solid $brand-lighter;
+    border-right: 1px solid $brand-lighter;
+    border-bottom: 1px solid $brand-lighter;
+    color: $brand;
+    @include font-body;
+    width: 100px;
+  }
+
+  button:focus, button:hover, input[type=submit]:focus, input[type=submit]:hover {
+    background: $brand-darker;
+    color: $white;
+  }
+
+  .select-selected {
+    background-color: $white;
+    color: $brand;
+    width: 200px;
+    border: 1px solid $brand-lighter;
+  }
+}
+
+.custom-select select {
+  display: none; /*hide original SELECT element: */
+}
+
+/* Style the arrow inside the select element: */
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 18px;
+  left: 180px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: $brand transparent transparent transparent;
+  // background-color: $brand;
+}
+
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent $brand transparent;
+  top: 12px;
+}
+
+/* style the items (options), including the selected item: */
+.select-items div,.select-selected {
+  color: $brand;
+  padding: 8px 16px;
+  border: 1px solid $brand-lighter;
+  border-color: transparent transparent $brand-lighter transparent;
+  cursor: pointer;
+}
+
+/* Style items (options): */
+.select-items {
+  position: absolute;
+  background-color: $white;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  border-bottom: 1px solid $brand-lighter;
+  border-left: 1px solid $brand-lighter;
+  border-right: 1px solid $brand-lighter;
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}

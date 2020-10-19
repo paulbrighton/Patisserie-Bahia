@@ -1,0 +1,168 @@
+.c-brand {
+  background: $black;
+  margin: 0;
+  padding: 0;
+
+  h4 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: $white;
+  }
+
+  &-info {
+    padding-top: 3.125rem;
+    padding-bottom: 3.125rem;
+
+    &__container {
+      padding: 0 rem-calc(10);
+    }
+
+    &__social {
+      text-align: center;
+      &-icons {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      &-logo {
+        width: 25px;
+        height: 25px;
+      }
+    }
+
+    &__logo {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 200px;
+        height: auto;
+      }
+      &-text-bottom {
+        color: $white;
+        display: block;
+        font-size: 0.875rem;
+      }
+
+      img {
+        width: 100%;
+        max-width: 200px;
+        height: auto;
+      }
+    }
+
+    &__contact {
+      display: flex;
+      &-text {
+        width: 100%;
+      }
+
+      p {
+        color: $white;
+        text-align: center;
+        &:nth-last-child(1) {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+// 767
+@media only screen and (max-width: 767px) {
+  .c-brand {
+    text-align: center;
+
+    h5 {
+      margin-bottom: rem-calc(25);
+      font-size: rem-calc(25);
+    }
+
+    &-info {
+
+      &__container {
+        padding: 0 rem-calc(30);
+      }
+
+      &__social {
+        &-icons {
+          justify-content: center;
+        }
+
+        &-logo {
+          width: 35px;
+          height: auto;
+        }
+      }
+
+      &__logo {
+        justify-content: center;
+        margin: 55px 10px 35px;
+      }
+
+      &__contact {
+        &-text {
+          width: 100%;
+        }
+
+        p {
+          color: $white;
+          &:nth-last-child(1) {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+// 767 tp 959
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  .c-brand {
+    text-align: center;
+
+    h5 {
+      margin-bottom: rem-calc(20);
+    }
+
+    &-info {
+
+      &__container {
+        padding: 0 rem-calc(30);
+      }
+
+      &__social {
+        &-icons {
+          justify-content: center;
+        }
+
+        &-logo {
+          width: 50px;
+          height: auto;
+        }
+      }
+
+      &__logo {
+        justify-content: center;
+        margin: 70px 10px 35px;
+      }
+
+      &__contact {
+        &-text {
+          width: 100%;
+        }
+
+        p {
+          color: $white;
+          text-align: center;
+          &:nth-last-child(1) {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}

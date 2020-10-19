@@ -1,0 +1,30 @@
+
+.c-header {
+
+    padding: rem-calc(10) 0;
+    color: $brand;
+    height: 60px;
+    align-items: center;
+
+    &__main {
+        background-color: $white;
+        border-bottom: 1px solid $brand-lighter;
+    }
+
+    &__blogname {
+        color: $brand;
+        &:hover {
+            color: $brand-lighter;
+        }
+    }
+    &__logo {
+        font-size: rem-calc(20);
+        margin-left: 0.625rem;
+        @media (max-width: 767px) {
+            margin-left: 0;
+        }
+        img {
+            max-width: 200px;
+        }
+    }
+}

@@ -1,0 +1,436 @@
+.c-front-page {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    color: $brand;
+  }
+  #cff .cff-item.cff-box, #cff .cff-item.cff-box:first-child {
+    margin: 0;
+  }
+}
+
+.c-selection {
+  padding: 100px 0.625rem;
+}
+
+.c-our-food {
+  background: $brand-cream;
+  padding: 100px 0;
+}
+
+.c-who-we-are,
+.c-our-food,
+.c-customize {
+  margin-top: 100px;
+  margin-bottom: 100px;
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0.625rem;
+  }
+
+  &__text {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    h2 {
+      text-align: left;
+    }
+  }
+
+  &__image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__text-body {
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.c-our-food {
+
+  &__text {
+    padding-left: 2.5rem;
+    @media (max-width: 1023px) {
+      padding-left: 0;
+      padding-top: 70px;
+    }
+  }
+}
+
+.c-who-we-are,
+.c-customize {
+
+  &__text {
+    padding-right: 2.5rem;
+    @media (max-width: 1023px) {
+      padding-right: 0;
+      padding-bottom: 70px;
+    }
+  }
+}
+
+.c-customize__text-body {
+  margin-bottom: 25px;
+}
+
+.c-sweet-treats,
+.c-savoury-snacks {
+  display: flex;
+
+  &__text {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &-container {
+      display: flex;
+      flex-direction: column;
+      width: 85%;
+    }
+  }
+
+  &__image {
+    width: 50%;
+  }
+}
+
+.c-customize__text-body {
+  margin-bottom: 25px;
+}
+
+.c-sweet-treats,
+.c-savoury-snacks {
+  display: flex;
+
+  &__text {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &-container {
+      display: flex;
+      flex-direction: column;
+      width: 85%;
+    }
+  }
+
+  &__image {
+    width: 50%;
+  }
+}
+
+.c-social-container {
+  padding: 50px 0.625rem 70px;
+  background-color: $brand-cream;
+  // @media (max-width: 767px) {
+  //   padding: 50px 0 70px;
+  // }
+}
+
+@media only screen and (max-width: 767px) {
+  .c-who-we-are {
+    &__image {
+      margin-top: 50px;
+
+      img {
+        width: 100%;
+        max-width: 960px;
+        height: auto;
+      }
+    }
+  }
+
+  .c-selection {
+    padding: 70px 0.625rem;
+    @media (max-width: 959px) {
+      &__card {
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    h3 {
+      font-size: rem-calc(30);
+    }
+  }
+
+  .c-who-we-are,
+  .c-our-food {
+    margin-top: 50px;
+    margin-bottom: 70px;
+
+    &__text {
+      padding: 0;
+    }
+
+    &__text-body {
+      p:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .c-our-food {
+    background: $brand-cream;
+    padding: 70px 0;
+
+    &__image {
+      margin-bottom: 50px;
+    }
+  }
+
+  .c-customize {
+    margin: 50px 0 70px;
+    &__text {
+      margin-bottom: 50px;
+      padding: 0;
+    }
+    .c-button--customize {
+      margin-bottom: 20px;
+      margin: 20px auto;
+    }
+  }
+
+  .c-sweet-treats,
+  .c-savoury-snacks {
+    display: flex;
+    flex-direction: column-reverse;
+
+    &__text {
+      width: 100%;
+      padding: 100px 0;
+    }
+
+    &__image {
+      width: 100%;
+    }
+  }
+
+  .c-savoury-snacks {
+    background: $brand-cream;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .c-who-we-are {
+
+    &__image {
+      margin-top: 50px;
+
+      img {
+        width: 100%;
+        // max-width: 960px;
+        height: auto;
+      }
+    }
+  }
+
+  .c-our-food {
+    display: flex;
+    justify-content: center;
+    h2 {
+      text-align: center;
+    }
+    &__image {
+      margin-top: 0;
+
+      img {
+        width: 75%;
+        height: auto;
+      }
+    }
+
+    &__text {
+      margin-bottom: 0;
+      padding: 0;
+
+      &-body {
+        max-width: 768px;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  .c-customize {
+    &__text {
+      padding: 0;
+    }
+  }
+
+  .c-selection {
+    padding: 70px 0.625rem 34px;
+    &__container {
+      display: flex;
+      align-content: center;
+      justify-content: center;
+    }
+
+    h3 {
+      font-size: rem-calc(30);
+    }
+
+    &__card {
+      margin-bottom: 35px;
+      // &:last-of-type {
+      //   margin-bottom: 0;
+      // }
+    }
+  }
+  
+
+  .c-who-we-are,
+  .c-our-food,
+  .c-customize {
+    margin-top: 50px;
+    margin-bottom: 70px;
+
+    &__text {
+      padding: 0;
+    }
+
+    &__text-body {
+      p:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .c-our-food {
+    display: flex;
+    justify-content: center;
+    background: $brand-cream;
+    padding: 70px 0 0 0;
+    &__text {
+      margin-bottom: 70px;
+      padding: 0;
+      // width: 75%;
+
+      &-body {
+        max-width: 768px; 
+        margin: 0 auto;
+      }
+    }
+
+    &__image {
+      width: 100%;
+      max-width: 768px;
+      margin-bottom: 50px;
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .c-customize,
+  .c-who-we-are {
+    display: flex;
+    justify-content: center;
+    h1, h2 {
+      text-align: center;
+    }
+
+    &__text {
+      margin-bottom: 70px;
+      padding: 0;
+      // width: 75%;
+
+      &-body {
+        max-width: 768px;
+        margin: 0 auto;
+      }
+    }
+
+    &__image {
+      width: 100%;
+      max-width: 768px;
+    }
+    .c-button__container {
+      display: flex;
+      justify-content: center;
+      margin-top: 35px;
+    }
+  }
+
+  .c-who-we-are {
+    display: flex;
+    justify-content: center;
+    h1 {
+      text-align: center;
+    }
+
+    &__text {
+      margin: 0;
+      padding-bottom: 70px;
+
+      &-body {
+        // width: 75%;
+        margin: 0 auto;
+        max-width: 768px;
+      }
+    }
+
+    &__image {
+      width: 100%;
+      max-width: 768px;
+      margin-top: 0;
+    }
+  }
+
+  .c-sweet-treats {
+    padding-top: 70px;
+  }
+
+  .c-savoury-snacks {
+    padding-bottom: 0;
+  }
+  .c-sweet-treats,
+  .c-savoury-snacks {
+    display: flex;
+    flex-direction: column-reverse;
+
+    &__text {
+      width: 80%;
+      margin: 0 auto;
+      padding: 70px 0;
+    }
+
+    &__image {
+      // width: 100%;
+      display: flex;
+      justify-content: center;
+      margin: 0 auto;
+      width: 768px;
+
+      img {
+        width: 100%;
+        // max-width: 768px;
+      }
+    }
+  }
+
+  .c-savoury-snacks {
+    background: $brand-cream;
+    padding-bottom: 70px;
+  }
+
+  .c-social-container {
+    background-color: $white
+  }
+}

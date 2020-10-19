@@ -1,0 +1,58 @@
+.price-table {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  &--doces {
+    width: 100%;
+  }
+
+  &--salgados {
+    width: 100%;
+  }
+
+  .wp-block-table {
+    font-size: rem-calc(14);
+    width: 48%;
+    margin-bottom: 45px;
+
+    th {
+      font-size: rem-calc(16);
+    }
+  }
+
+  .wp-block-table.is-style-stripes {
+    border-bottom: 1px solid $grey;
+    border-top: 1px solid $grey;
+  }
+
+  .wp-block-table.is-style-stripes.cake-first-table {
+    @media (min-width: 960px) {
+      width: 768px;
+      margin: 0 auto 45px;
+    }
+  }
+
+  .wp-block-table figcaption,
+  .wp-block-video figcaption {
+    color: $brand;
+    font-size: 14px;
+    text-align: center;
+    padding-bottom: 15px;
+  }
+
+  thead {
+    color: $brand;
+  }
+}
+
+@media only screen and (max-width: 959px) {
+  .price-table {
+    flex-direction: column;
+
+    .wp-block-table {
+      width: 100%;
+    }
+  }
+}
