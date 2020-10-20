@@ -83,11 +83,11 @@
       margin: 50px 1.25rem 25px;
     }
     &-description {
+      margin: 0;
       margin-bottom: 50px;
       max-width: 768px;
       @media (min-width: 768px) {
-        margin: 0 auto 50px;
-        text-align: center;
+        margin: 0 1.25rem 50px;
       }
     }
   }
@@ -98,10 +98,6 @@
     @media (max-width: 959px) {
       padding: 50px 1.25rem 10px;
     }
-  }
-
-  &__blog-posts {
-    
   }
 
   &__blog-link {
@@ -126,4 +122,12 @@
       font-size: 1rem;
     }
   }
+}
+
+.c-sweet-savoury__price-btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 35px;
+  margin-top: 0;
 }

@@ -28,7 +28,21 @@
     &__container {
       background: $brand-cream;
     }
-    padding: 70px 1.25rem 20px;
+    &__list {
+      padding-left: 50px;
+      @media (max-width: 1023px) {
+        max-width: 768px;
+        margin: 25px auto 0;
+        padding-left: 0;
+      }
+    }
+    &__image {
+      @media (max-width: 1023px) {
+        max-width: 768px;
+        margin: 0 auto 50px;
+      }
+    }
+    padding: 70px 1.25rem;
     ol {
       margin-bottom: 50px;
     }
@@ -136,11 +150,6 @@
 
     &__how-it-works {
       
-      padding: 70px 1.25rem 40px;
-
-      ol {
-        margin: 0 1rem 50px;
-      }
     }
 
     &__blog-posts {
@@ -184,7 +193,7 @@
     &__how-it-works {
       
       margin-bottom: 0;
-      padding: 50px 1.25rem 50px;
+      padding: 70px 1.25rem 50px;
 
       ol {
         margin: 0 1rem 0;

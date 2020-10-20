@@ -91,7 +91,7 @@ export const pot = () => {
 
 export const serve = (done) => {
   server.init({
-    proxy: 'http://192.168.1.19/patisserie-bahia'
+    proxy: 'http://192.168.1.19/patisserie-local'
   })
   done()
 }

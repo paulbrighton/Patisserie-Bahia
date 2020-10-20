@@ -46,7 +46,6 @@
     </div>
   </div>
 </div>
-</div>
 
 
 <div class="c-sweet-savoury c-sweet-savoury__price">
@@ -54,13 +53,16 @@
     <h3><?php the_field('savoury_price_list_title', 440); ?></h3>
     <?php the_field('price_list_description'); ?>
   </div>
-  
+
   <div class="price-table">
     <?php the_content(); ?>
+    <div class="c-button__container c-sweet-savoury__price-btn">
+      <a href="<?php the_field('price_list_button_link'); ?>" class="c-button c-button--selection-card"><?php the_field('price_list_button_text'); ?></a>
+    </div>
   </div>
 </div>
 
-<div class="c-sweet-savoury__blog-posts-container">
+<!-- <div class="c-sweet-savoury__blog-posts-container">
   <div class="c-sweet-savoury c-sweet-savoury__blog-posts">
     <h3><?php the_field('articles_header_title'); ?></h3>
     <div class="u-flex u-flex-wrap u-justify-evenly">
@@ -70,6 +72,6 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
 
 <?php get_footer(); ?>

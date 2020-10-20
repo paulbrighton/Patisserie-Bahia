@@ -33,17 +33,34 @@
 </div>
 
 <div class="c-food-page c-food-page__how-it-works__container">
-  <div class="c-food-page__how-it-works">
-    <h2><?php the_field('custom_cake_title'); ?></h2>
-    <ol>
-      <li><?php the_field('custom_cake_list_item_1'); ?></li>
-      <li><?php the_field('custom_cake_list_item_2'); ?></li>
-      <li><?php the_field('custom_cake_list_item_3'); ?></li>
-      <li><?php the_field('custom_cake_list_item_4'); ?></li>
-      <li><?php the_field('custom_cake_list_item_5'); ?></li>
-      <li><?php the_field('custom_cake_list_item_6'); ?></li>
-      <li><?php the_field('custom_cake_list_item_7'); ?></li>
-    </ol>
+  <div class="o-row c-food-page__how-it-works u-flex u-justify-justify u-align-middle">
+    <div class="c-food-page__how-it-works__image o-row__column o-row__column-span--12 o-row__column--span-12@small o-row__column--span-5@large">
+      <?php
+      $image = get_field('how_it_works_image');
+      $size = 'full'; // (thumbnail, medium, large, full or custom size)
+      if ($image) {
+        echo wp_get_attachment_image($image, $size);
+      }
+      ?>
+    </div>
+   
+    <div class="c-food-page__how-it-works__list o-row__column o-row__column-span--12 o-row__column--span-12@small o-row__column--span-7@large">
+      <h2><?php the_field('custom_cake_title'); ?></h2>
+      <div>
+        <ol>
+          <li><?php the_field('custom_cake_list_item_1'); ?></li>
+          <li><?php the_field('custom_cake_list_item_2'); ?></li>
+          <li><?php the_field('custom_cake_list_item_3'); ?></li>
+          <li><?php the_field('custom_cake_list_item_4'); ?></li>
+          <li><?php the_field('custom_cake_list_item_5'); ?></li>
+          <li><?php the_field('custom_cake_list_item_6'); ?></li>
+          <li><?php the_field('custom_cake_list_item_7'); ?></li>
+        </ol>
+      </div>
+      <div class="c-button__container c-food-page__price-btn">
+        <a href="<?php the_field('price_list_button_link'); ?>" class="c-button c-button--selection-card"><?php the_field('price_list_button_text'); ?></a>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -54,10 +71,16 @@
   </div>
   <div class="price-table">
     <?php the_content(); ?>
+    <div class="price-table">
+      <?php the_content(); ?>
+      <div class="c-button__container c-sweet-savoury__price-btn">
+        <a href="<?php the_field('price_list_button_link'); ?>" class="c-button c-button--selection-card"><?php the_field('price_list_button_text'); ?></a>
+      </div>
+    </div>
   </div>
 </div>
 
-<div class="c-food-page c-food-page__blog-posts__container">
+<!-- <div class="c-food-page c-food-page__blog-posts__container">
   <div class="c-food-page__blog-posts">
     <h3><?php the_field('articles_header_title', 930); ?></h3>
     <div class="u-flex u-flex-wrap u-justify-evenly">
@@ -67,7 +90,7 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
 
 
 

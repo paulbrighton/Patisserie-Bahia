@@ -1,0 +1,65 @@
+.c-about {
+  .yoast__breadcrumbs {
+    padding-left: 1.25rem;
+    margin-bottom: 1rem;
+  }
+  &__container {
+    padding: 50px 1.25rem 0;
+    @media (max-width: 1023px) {
+      padding: 25px 1.25rem 0;
+    }
+  }
+  h1 {
+    color: $brand;
+    @include font-bold;
+    margin-bottom: 35px;
+    @media (max-width: 959px) {
+      text-align: center;
+    }
+    @media (min-width: 960px) and (max-width: 1023px) {
+      font-size: 2.25rem;
+      margin-bottom: 25px;
+    }
+  }
+  &__intro {
+    margin-bottom: 70px;
+    @media (max-width: 1023px) {
+      margin-bottom: 0;
+    }
+    &-text {
+      @include font-bold;
+      font-size: 1.5rem;
+      text-align: center;
+      padding: 0 2.5rem;
+      color: $brand-darker;
+      @media (max-width: 1023px) {
+        font-size: 1.3rem;
+        padding: 0 1.75rem;
+      }
+      p {
+        hyphens: none;
+      }
+      @media (max-width: 1023px) {
+        padding: 0 2.5rem;
+        margin: 50px auto 34px;
+        max-width: 700px;
+      }
+      @media (max-width: 767px) {
+        margin-top: 50px;
+        padding: 0 1rem;
+        margin-bottom: 34px;
+      }
+    }
+    &-image {
+      max-width: 768px;
+      margin: 0 auto;
+    }
+  }
+
+  &__body-text {
+    margin-bottom: 50px;
+    p {
+      max-width: 800px;
+    }
+  }
+}

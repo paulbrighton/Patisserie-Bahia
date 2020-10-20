@@ -43,7 +43,7 @@
     </div>
   </div>
 
-  <div class="o-row__column o-row__column--span-12@small c-food-page__blog-posts">
+  <!-- <div class="o-row__column o-row__column--span-12@small c-food-page__blog-posts">
     <h3><?php the_field('sweet_articles_list_title'); ?></h3>
     <div class="u-flex u-flex-wrap u-justify-evenly">
       <?php get_template_part('loop', 'sweet') ?>
@@ -51,6 +51,6 @@
         <a href="index.php?page_id=15"><?php the_field('blog_page_link_text'); ?></a>
       </div>
     </div>
-  </div>
+  </div> -->
 </div>
 <?php get_footer(); ?>

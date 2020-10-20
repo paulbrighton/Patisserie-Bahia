@@ -69,6 +69,9 @@
       padding-top: 70px;
     }
   }
+  &__link {
+    text-align: right;
+  }
 }
 
 .c-who-we-are,
@@ -109,7 +112,9 @@
   }
 }
 
-.c-customize__text-body {
+.c-customize__text-body,
+.c-who-we-are__text-body,
+.c-our-food__text-body {
   margin-bottom: 25px;
 }
 
@@ -189,7 +194,7 @@
 
   .c-our-food {
     background: $brand-cream;
-    padding: 70px 0;
+    padding: 70px 0 50px;
 
     &__image {
       margin-bottom: 50px;
@@ -199,7 +204,7 @@
   .c-customize {
     margin: 50px 0 70px;
     &__text {
-      margin-bottom: 50px;
+      margin-bottom: 30px;
       padding: 0;
     }
     .c-button--customize {
@@ -225,6 +230,12 @@
 
   .c-savoury-snacks {
     background: $brand-cream;
+  }
+  .c-button__container {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
   }
 }
 
@@ -339,7 +350,8 @@
   }
 
   .c-customize,
-  .c-who-we-are {
+  .c-who-we-are,
+  .c-our-food {
     display: flex;
     justify-content: center;
     h1, h2 {

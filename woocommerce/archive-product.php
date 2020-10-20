@@ -55,6 +55,8 @@ get_header('shop');
 			<?php } ?>
 		<?php endif; ?>
 
+		<p class="shop-subheader"><?php the_field('shop_subheading_text', 26); ?> <a href="<?php the_field('shop_subheading_link', 26); ?>"><?php the_field('shop_subheading_link_text', 26); ?></a>. </p>
+
 		<?php
 		/**
 		 * Hook: woocommerce_archive_description.

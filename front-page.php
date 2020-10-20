@@ -28,22 +28,45 @@
 
 <div class="o-container c-who-we-are c-front-page">
   <div class="o-row c-who-we-are__container">
-    <div class="o-row__column o-row__column--span-12 o-row__column--span-7@large c-who-we-are__text">
+    <div class="o-row__column o-row__column--span-12 o-row__column--span-6@large c-who-we-are__text">
       <h1><?php the_field('who_we_are_title'); ?></h1>
       <div class="c-who-we-are__text-body">
         <?php the_field('who_we_are_text'); ?>
       </div>
+      <div class="c-button__container">
+        <a href="<?php the_field('who_we_are_link'); ?>" class="c-button c-button--customize"><?php the_field('who_we_are_link_text'); ?></a>
+      </div>
     </div>
 
-    <!-- <div class="o-row__column o-row__column--span-12 o-row__column--span-1@medium"></div> -->
+    <!-- <div class="o-row__column o-row__column--span-12 o-row__column--span-1@large"></div> -->
 
-    <div class="o-row__column o-row__column--span-12 o-row__column--span-5@large c-who-we-are__image">
+    <div class="o-row__column o-row__column--span-12 o-row__column--span-6@large c-who-we-are__image">
       <?php
-      $image = get_field('who_we_are_image');
-      $size = 'full'; // (thumbnail, medium, large, full or custom size)
-      if ($image) {
-        echo wp_get_attachment_image($image, $size);
-      }
+        if (get_field('home_page_video')) {
+        
+          $video_mp4 =  get_field('home_page_video'); // MP4 Field Name
+          $video_poster  = get_field('poster_image');
+
+          $attr =  array(
+            'mp4'      => $video_mp4,
+            'src'      => '',
+            'poster'   => $video_poster,
+            'loop'     => '1',
+            'autoplay' => 'on',
+            'preload'  => 'metadata',
+            'width'    => 960,
+            'height'   => 640,
+            'class'    => 'wp-video-shortcode',
+          );
+
+          echo wp_video_shortcode($attr);
+        } else {
+          $image = get_field('who_we_are_image');
+          $size = 'full'; // (thumbnail, medium, large, full or custom size)
+          if ($image) {
+            echo wp_get_attachment_image($image, $size);
+          }
+        }
       ?>
     </div>
   </div>
@@ -52,7 +75,7 @@
 <div class="o-container--full c-our-food c-front-page">
   <div class="o-container">
     <div class="o-row c-our-food__container">
-      <div class="o-row__column o-row__column--span-12 o-row__column--span-5@large c-our-food__image">
+      <div class="o-row__column o-row__column--span-12 o-row__column--span-6@large c-our-food__image">
         <?php
         $image = get_field('our_food_image');
         $size = 'full'; // (thumbnail, medium, large, full or custom size)
@@ -64,10 +87,13 @@
 
       <!-- <div class="o-row__column o-row__column--span-12 o-row__column--span-1@medium"></div> -->
 
-      <div class="o-row__column o-row__column--span-12 o-row__column--span-7@large c-our-food__text">
+      <div class="o-row__column o-row__column--span-12 o-row__column--span-6@large c-our-food__text">
         <h2><?php the_field('our_food_title'); ?></h2>
         <div class="c-our-food__text-body">
           <?php the_field('our_food_text'); ?>
+        </div>
+        <div class="c-button__container c-our-food__link">
+          <a href="<?php the_field('who_we_are_link'); ?>" class="c-button c-button--customize"><?php the_field('who_we_are_link_text'); ?></a>
         </div>
       </div>
     </div>
@@ -78,7 +104,7 @@
 
 <div class="o-container c-customize c-front-page">
   <div class="o-row c-customize__container">
-    <div class="o-row__column o-row__column--span-12 o-row__column--span-7@large c-customize__text">
+    <div class="o-row__column o-row__column--span-12 o-row__column--span-6@large c-customize__text">
       <h2><?php the_field('customize_cake_title'); ?></h2>
       <div class="c-customize__text-body">
         <?php the_field('customize_cake_text'); ?>
@@ -90,7 +116,7 @@
 
     <!-- <div class="o-row__column o-row__column--span-12 o-row__column--span-1@medium"></div> -->
 
-    <div class="o-row__column o-row__column--span-12 o-row__column--span-5@large c-customize__image">
+    <div class="o-row__column o-row__column--span-12 o-row__column--span-6@large c-customize__image">
       <?php
       $image = get_field('customize_cake_image');
       $size = 'full'; // (thumbnail, medium, large, full or custom size)
@@ -122,7 +148,7 @@
         <div class="c-selection__card-text">
           <p><?php the_field('savoury_snacks_card_text'); ?></p>
         </div>
-        
+
         <div class="c-button__container u-flex u-justify-center">
           <a href="<?php the_field('savoury_snacks_card_button_link'); ?>" class="c-button c-button--selection-card"><?php the_field('savoury_snacks_card_button_text'); ?></a>
         </div>
@@ -164,7 +190,7 @@
         <div class="c-selection__card-text">
           <p><?php the_field('cake_selection_text'); ?></p>
         </div>
-        
+
         <div class="c-button__container u-flex u-justify-center">
           <a href="<?php the_field('cake_selection_button_link'); ?>" class="c-button c-button--selection-card"><?php the_field('cake_selection_button_text'); ?></a>
         </div>
@@ -222,7 +248,7 @@
   <div class="o-container c-social">
     <div class="o-row">
       <div class="o-row__column o-row__column--span-12">
-      <h3><?php the_field('social_media_title'); ?></h3>
+        <h3><?php the_field('social_media_title'); ?></h3>
         <?php echo do_shortcode('[custom-facebook-feed class="slideshow"]'); ?>
       </div>
     </div>
