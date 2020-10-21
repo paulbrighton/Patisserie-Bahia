@@ -131,6 +131,7 @@ $fa-font-path: "../../../node_modules/@fortawesome/fontawesome-free/webfonts";
   visibility: hidden !important;
 }
 
+
 .woocommerce ul.cart_list li img,
 .woocommerce ul.product_list_widget li img {
   float: right;
@@ -146,4 +147,10 @@ $fa-font-path: "../../../node_modules/@fortawesome/fontawesome-free/webfonts";
   list-style: none outside;
   padding: 0 20px 0 0 !important;
   margin: 0;
+  @include font-body;
+}
+
+.woocommerce ul.cart_list li a, .woocommerce ul.product_list_widget li a {
+  display: block;
+  font-weight: 300 !important;
 }

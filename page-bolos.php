@@ -43,7 +43,7 @@
       }
       ?>
     </div>
-   
+
     <div class="c-food-page__how-it-works__list o-row__column o-row__column-span--12 o-row__column--span-12@small o-row__column--span-7@large">
       <h2><?php the_field('custom_cake_title'); ?></h2>
       <div>
@@ -71,11 +71,8 @@
   </div>
   <div class="price-table">
     <?php the_content(); ?>
-    <div class="price-table">
-      <?php the_content(); ?>
-      <div class="c-button__container c-sweet-savoury__price-btn">
-        <a href="<?php the_field('price_list_button_link'); ?>" class="c-button c-button--selection-card"><?php the_field('price_list_button_text'); ?></a>
-      </div>
+    <div class="c-button__container c-sweet-savoury__price-btn">
+      <a href="<?php the_field('price_list_button_link'); ?>" class="c-button c-button--selection-card"><?php the_field('price_list_button_text'); ?></a>
     </div>
   </div>
 </div>

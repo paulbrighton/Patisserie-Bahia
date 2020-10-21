@@ -42,8 +42,13 @@
 
     <div class="o-row__column o-row__column--span-12 o-row__column--span-6@large c-who-we-are__image">
       <?php
-        if (get_field('home_page_video')) {
-        
+        if (wp_is_mobile()) {
+          $image = get_field('who_we_are_image');
+          $size = 'full'; // (thumbnail, medium, large, full or custom size)
+          if ($image) {
+            echo wp_get_attachment_image($image, $size);
+          }
+        } else {
           $video_mp4 =  get_field('home_page_video'); // MP4 Field Name
           $video_poster  = get_field('poster_image');
 
@@ -57,15 +62,10 @@
             'width'    => 960,
             'height'   => 640,
             'class'    => 'wp-video-shortcode',
+            'muted'    => '1'
           );
 
           echo wp_video_shortcode($attr);
-        } else {
-          $image = get_field('who_we_are_image');
-          $size = 'full'; // (thumbnail, medium, large, full or custom size)
-          if ($image) {
-            echo wp_get_attachment_image($image, $size);
-          }
         }
       ?>
     </div>
