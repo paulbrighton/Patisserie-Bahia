@@ -141,11 +141,26 @@
 }
 
 .c-social-container {
+  justify-content: center;
   padding: 50px 0.625rem 70px;
   background-color: $brand-cream;
+  // padding: 0 25%;
   // @media (max-width: 767px) {
   //   padding: 50px 0 70px;
   // }
+}
+
+.c-social-facebook {
+  max-width: 768px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cff-wrapper .cff-default-styles {
+  border-radius: 10px;
 }
 
 @media only screen and (max-width: 767px) {
@@ -442,7 +457,7 @@
     padding-bottom: 70px;
   }
 
-  .c-social-container {
-    background-color: $white
-  }
+  // .c-social-container {
+  //   background-color: $white;
+  // }
 }

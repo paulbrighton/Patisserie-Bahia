@@ -244,10 +244,10 @@
 </div>
 <!-- End: savoury snacks -->
 
-<div class="o-container-full c-front-page c-social-container">
+<div class="c-front-page c-social-container">
   <div class="o-container c-social">
     <div class="o-row">
-      <div class="o-row__column o-row__column--span-12">
+      <div class="o-row__column o-row__column--span-12 c-social-facebook">
         <h3><?php the_field('social_media_title'); ?></h3>
         <?php echo do_shortcode('[custom-facebook-feed class="slideshow"]'); ?>
       </div>

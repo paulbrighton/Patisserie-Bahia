@@ -42,7 +42,7 @@
         margin: 0 auto 50px;
       }
     }
-    padding: 70px 1.25rem;
+    padding: 70px 0.625rem;
     ol {
       margin-bottom: 50px;
     }
@@ -101,10 +101,6 @@
     }
   }
 
-  &__intro-sweet {
-
-  }
-
   &__intro-savoury {
     flex-direction: row-reverse;
     &-text {
@@ -148,10 +144,6 @@
       }
     }
 
-    &__how-it-works {
-      
-    }
-
     &__blog-posts {
       padding: 0 0 70px;
     }
@@ -193,7 +185,7 @@
     &__how-it-works {
       
       margin-bottom: 0;
-      padding: 70px 1.25rem 50px;
+      padding: 70px 0.625rem 50px;
 
       ol {
         margin: 0 1rem 0;
